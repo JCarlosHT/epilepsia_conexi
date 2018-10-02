@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "425680646816",
+    "firebase_url": "https://epilepsiapp.firebaseio.com",
+    "project_id": "epilepsiapp",
+    "storage_bucket": "epilepsiapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:425680646816:android:dcbeb62a957936c4",
+        "android_client_info": {
+          "package_name": "com.example.juan.epilepsia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "425680646816-0s7pn4vfcrdcisv3sjonai813he0rosf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.juan.epilepsia",
+            "certificate_hash": "3a177b42c8337c18083a1532304f76fe690fc0cd"
+          }
+        },
+        {
+          "client_id": "425680646816-fkk5j1o986nq42iqkj1cqch0cptan8rf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvsHYWI1ikxrGij98ISydiwfIlyOOMcOo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "425680646816-fkk5j1o986nq42iqkj1cqch0cptan8rf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

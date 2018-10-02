@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/fondo"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ventanas.Perfil_medico">
+
+    <EditText
+        android:id="@+id/editText7"
+        android:theme="@style/CampoTexto1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="158dp"
+        android:ems="10"
+        android:hint="Edad"
+        android:inputType="number"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff" />
+
+
+    <EditText
+        android:id="@+id/editText12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="104dp"
+        android:ems="10"
+        android:hint="Hospital de preferencia"
+        android:inputType="textPersonName"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:theme="@style/CampoTexto1" />
+
+    <Button
+        android:id="@+id/Continuar"
+        android:layout_width="222dp"
+        android:layout_height="37dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="41dp"
+        android:background="@drawable/botones"
+        android:onClick="Contin"
+        android:text="Continuar"
+        android:textColor="#ffffff" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/editText7"
+        android:layout_marginTop="217dp"
+        android:theme="@style/CampoTexto1"
+        android:text="Alergias"
+        android:textColor="#ffffff"
+        tools:ignore="RtlCompat" />
+
+    <CheckBox
+        android:id="@+id/checkBox5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText7"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/editText7"
+        android:layout_marginBottom="221dp"
+        android:text="Enfermedades alternas"
+        android:theme="@style/CampoTexto1"
+        android:textColor="#ffffff"
+        tools:ignore="RtlCompat" />
+
+    <EditText
+        android:id="@+id/editText6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="164dp"
+        android:ems="10"
+        android:theme="@style/CampoTexto1"
+        android:hint="Tipo de sangre"
+        android:inputType="textPersonName"
+        android:textColor="#ffffff"
+        android:textColorHighlight="#ffffff"
+        android:textColorHint="#ffffff" />
+
+    <RadioGroup
+        android:theme="@style/CampoTexto1"
+        android:id="@+id/group"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:ignore="RtlCompat">
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="86dp"
+            android:layout_height="21dp"
+            android:layout_alignStart="@+id/editText7"
+            android:layout_centerVertical="true"
+            android:text="Hombre"
+            android:textColor="#ffffff" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="85dp"
+            android:layout_height="20dp"
+            android:layout_alignEnd="@+id/editText7"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:text="Mujer"
+            android:textColor="#ffffff" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="218dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editText7"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-158dp"
+        app:srcCompat="@drawable/lg" />
+
+</RelativeLayout>

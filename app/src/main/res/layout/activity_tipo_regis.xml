@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/fondo"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ventanas.tipo_regis">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="310dp"
+        android:layout_height="99dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="58dp"
+        android:text="Seleccione tipo de usuario"
+        android:textColor="#ffffff"
+        android:textSize="30sp"
+        app:fontFamily="monospace"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp" />
+
+
+    <Button
+        android:id="@+id/Continuar"
+        android:layout_width="215dp"
+        android:layout_height="33dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="56dp"
+        android:background="@drawable/botones"
+        android:onClick="onClick"
+        android:text="Continuar"
+        android:textColor="#ffffff" />
+
+    <RadioGroup
+        android:layout_width="306dp"
+        android:layout_height="241dp"
+        android:layout_alignStart="@+id/textView"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:theme="@style/CampoTexto1">
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="224dp"
+            android:layout_height="77dp"
+            android:text="Contacto de emergencia"
+            android:textColor="#ffffff"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="224dp"
+            android:layout_height="77dp"
+            android:text="Usuario con epilepsia"
+            android:textColor="#ffffff"
+            android:textSize="24sp" />
+    </RadioGroup>
+
+</RelativeLayout>
