@@ -9,4 +9,9 @@
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
+    <string name="title_activity_mapa">mapa</string>
+    <string name="title_activity_mapita">mapita</string>
+    <string name="title_activity_mp_cont">Map</string>
+    <string name="title_activity_mapa_ubicacion">Map</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

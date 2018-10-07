@@ -8,37 +8,6 @@
     android:layout_height="match_parent"
     tools:context=".ventanas.menu_epi">
 
-    <EditText
-        android:id="@+id/contacto_nom"
-        android:layout_width="264dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="144dp"
-        android:drawableLeft="@drawable/usu"
-        android:ems="10"
-        android:hint="Nombre de contacto de emergencia"
-        android:inputType="textPersonName"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"
-        android:textSize="18sp"
-        android:theme="@style/CampoTexto1" />/>
-
-    <EditText
-        android:id="@+id/correo_contac"
-        android:layout_width="259dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="223dp"
-        android:autoLink="none"
-        android:ems="10"
-        android:hint="Correo del contacto"
-        android:inputType="textPersonName"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"
-        android:textSize="18sp"
-        android:theme="@style/CampoTexto1" />
 
     <Button
         android:id="@+id/button4"
@@ -48,8 +17,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="101dp"
         android:background="@drawable/botones"
-        android:onClick="insert"
-        android:text="Enviar"
+        android:onClick="continuar"
+        android:text="continuar"
         android:textColor="#ffffff" />
 
 </RelativeLayout>

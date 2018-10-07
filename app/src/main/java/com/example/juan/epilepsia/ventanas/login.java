@@ -3,6 +3,7 @@ package com.example.juan.epilepsia.ventanas;
 import android.content.Intent;
 import android.database.Cursor;
 import android.support.v4.app.NotificationCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -12,6 +13,7 @@ import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.Toast;
 
+import com.example.juan.epilepsia.Manifest;
 import com.example.juan.epilepsia.datos_prim;
 import com.example.juan.epilepsia.sqlite.ConexionSQLite;
 import com.example.juan.epilepsia.R;
@@ -26,7 +28,7 @@ public class login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        datos_prim.sqLite= new ConexionSQLite(this);
+         datos_prim.sqLite= new ConexionSQLite(this);
         datos_prim.cursor=this.viewsqlite();
         int layout= R.layout.activity_login;
         if(datos_prim.cursor.getCount()>0){

@@ -9,18 +9,21 @@ import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v4.app.NotificationCompat.Builder;
 import android.util.Log;
-
-import com.example.juan.epilepsia.ventanas.alarma;
+import com.example.juan.epilepsia.ventanas.mapa_ubicacion;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService{
     private static final String LOGTAG = "android-fcm";
+    String latitud,longitud,Direccion;
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
-            String titulo = "nuevo mensaje";
-            String texto = "prueba";
+            String titulo = "Emergencia";
+            String texto = "El usuario ";
+            Direccion=remoteMessage.getData().get("mensaje");
+            latitud=remoteMessage.getData().get("latitud");
+            longitud=remoteMessage.getData().get("longitud");
             Log.e(LOGTAG, "NOTIFICACION RECIBIDA");
             Log.e(LOGTAG, "Título: " + titulo);
             Log.e(LOGTAG, "Texto: " + texto);
@@ -41,10 +44,12 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService{
                         .setSound(Uri.withAppendedPath(MediaStore.Audio.Media.INTERNAL_CONTENT_URI, "7"))
                         .setDefaults(Notification.DEFAULT_LIGHTS | Notification.DEFAULT_VIBRATE);
 
-        Intent i=new Intent(this,alarma.class);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, i, PendingIntent.FLAG_ONE_SHOT);
+        Intent i=new Intent(this,mapa_ubicacion.class);
+        i.putExtra("latitud",latitud);
+        i.putExtra("longitud",longitud);
+        i.putExtra("direc",Direccion);
+        PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, i, PendingIntent.FLAG_ONE_SHOT);
         Builder.setContentIntent(pendingIntent);
-
         NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         notificationManager.notify(0, Builder.build());
 
