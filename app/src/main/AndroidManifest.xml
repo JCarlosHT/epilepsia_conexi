@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -24,20 +25,35 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+        <service android:name=".Service_notifi" />
 
-        <activity android:name=".ventanas.login">
+        <activity
+            android:name=".ventanas.login"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ventanas.tipo_regis" />
-        <activity android:name=".ventanas.Regis_us" />
-        <activity android:name=".ventanas.Perfil_medico" />
-        <activity android:name=".Alergias" />
-        <activity android:name=".ventanas.menu_epi" />
-        <activity android:name=".ventanas.alarma">
+        <activity
+            android:name=".ventanas.tipo_regis"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ventanas.Regis_us"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ventanas.Perfil_medico"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Alergias"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ventanas.menu_epi"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ventanas.alarma"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="OPEN_ACTIVITY_1" />
 
@@ -45,17 +61,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".menu"
-            android:label="@string/title_activity_menu"
-            android:theme="@style/AppTheme" />
-        <activity android:name=".ventanas.cordenadas" />
+            android:name=".ventanas.cordenadas"
+            android:screenOrientation="portrait" />
+
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
              Note that the API key is linked to the encryption key used to sign the APK.
              You need a different API key for each encryption key, including the release key that is used to
              sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -64,6 +79,12 @@
         <activity
             android:name=".ventanas.mapa_ubicacion"
             android:label="@string/title_activity_mapa_ubicacion" />
+        <activity android:name=".ventanas.tipo_regis$bitacora" />
+        <activity android:name=".ventanas.bitacora" />
+        <activity android:name=".ventanas.recordatorio" />
+        <activity android:name=".ventanas.reporte" />
+        <activity android:name=".ventanas.borra_actualizar_contac" />
+        <activity android:name=".ventanas.Alerta_repo"></activity>
     </application>
 
 </manifest>

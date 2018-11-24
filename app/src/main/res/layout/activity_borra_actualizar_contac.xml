@@ -1,9 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/fondo"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".borra_actualizar_contac">
+    tools:context=".ventanas.borra_actualizar_contac">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="179dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp"
+        android:autoLink="none"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Editar-Borrar"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:theme="@style/CampoTexto1" />
+
+    <EditText
+        android:id="@+id/Nombre_contac"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="142dp"
+        android:ems="10"
+        android:hint="Nombre(s)"
+        android:inputType="textPersonName"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:theme="@style/CampoTexto1" />
+
+    <EditText
+        android:id="@+id/Apellido_con"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="202dp"
+        android:ems="10"
+        android:hint="Apellidos"
+        android:inputType="textPersonName"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:theme="@style/CampoTexto1" />
+
+    <EditText
+        android:id="@+id/Relacion_cont"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:ems="10"
+        android:hint="Relacion con el contacto"
+        android:inputType="textPersonName"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:theme="@style/CampoTexto1" />
+
+    <Button
+        android:id="@+id/Modificar"
+        android:layout_width="224dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="163dp"
+        android:background="@drawable/botones"
+        android:onClick="Modificar"
+        android:text="Modificar contacto"
+        android:textColor="#ffffff"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="303dp" />
+
+    <Button
+        android:id="@+id/Borrar"
+        android:layout_width="224dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/botones"
+        android:onClick="Borrar"
+        android:text="Borrar contacto"
+        android:textColor="#ffffff"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="303dp" />
+
+</RelativeLayout>

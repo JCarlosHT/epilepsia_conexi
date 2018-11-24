@@ -8,53 +8,16 @@
     android:layout_height="match_parent"
     tools:context=".ventanas.alarma">
 
-    <EditText
-        android:id="@+id/correo_contac"
-        android:layout_width="259dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="222dp"
-        android:autoLink="none"
-        android:ems="10"
-        android:hint="Correo del contacto"
-        android:inputType="textPersonName"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"
-        android:textSize="18sp"
-        android:theme="@style/CampoTexto1"
-        tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="218dp" />
-
-    <EditText
-        android:id="@+id/contacto_nom"
-        android:layout_width="264dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="114dp"
-        android:drawableLeft="@drawable/usu"
-        android:ems="10"
-        android:hint="Nombre de contacto de emergencia"
-        android:inputType="textPersonName"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"
-        android:textSize="18sp"
-        android:theme="@style/CampoTexto1"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="127dp" />
-
     <Button
         android:id="@+id/button4"
-        android:layout_width="211dp"
-        android:layout_height="33dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="123dp"
+        android:layout_alignStart="@+id/listview_contac"
+        android:layout_marginBottom="25dp"
         android:background="@drawable/botones"
         android:onClick="insert"
-        android:text="Enviar"
+        android:text="Agregar"
         android:textColor="#ffffff"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="87dp"
@@ -62,17 +25,26 @@
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="211dp"
-        android:layout_height="33dp"
+        android:layout_width="224dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="230dp"
+        android:layout_marginBottom="147dp"
         android:background="@drawable/botones"
         android:onClick="notifi"
-        android:text="notificacion"
+        android:text="Alerta de prueba"
         android:textColor="#ffffff"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="87dp"
         tools:layout_editor_absoluteY="303dp" />
+
+    <ListView
+        android:id="@+id/listview_contac"
+        android:layout_width="353dp"
+        android:layout_height="294dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:background="#CCfff8f8" />
 
 </RelativeLayout>

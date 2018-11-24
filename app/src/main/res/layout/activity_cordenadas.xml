@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/fondo"
     android:orientation="vertical"
@@ -7,15 +8,102 @@
     android:layout_height="match_parent"
     tools:context=".ventanas.cordenadas">
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp"
+        android:autoLink="none"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Añadir contacto"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:theme="@style/CampoTexto1" />
+
+    <EditText
+        android:id="@+id/user_contacto"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="113dp"
+        android:ems="10"
+        android:hint="Nombre del usuario"
+        android:inputType="textPersonName"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:theme="@style/CampoTexto1" />
+
+    <EditText
+        android:id="@+id/correo_con"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="151dp"
+        android:ems="10"
+        android:hint="Correo del contacto"
+        android:inputType="textEmailAddress"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:theme="@style/CampoTexto1" />
+
+    <EditText
+        android:id="@+id/Nombre_contac"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/correo_con"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Nombre(s)"
+        android:inputType="textPersonName"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:theme="@style/CampoTexto1" />
+
+    <EditText
+        android:id="@+id/Apellido_con"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="244dp"
+        android:ems="10"
+        android:hint="Apellidos"
+        android:inputType="textPersonName"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:theme="@style/CampoTexto1" />
+
+    <EditText
+        android:id="@+id/Relacion_cont"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Apellido_con"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Relacion con el contacto"
+        android:inputType="textPersonName"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:theme="@style/CampoTexto1" />
 
     <Button
-        android:id="@+id/calcular"
-        android:layout_width="wrap_content"
+        android:id="@+id/Agregar"
+        android:layout_width="224dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="135dp"
-        android:onClick="calculo"
-        android:text="Button" />
+        android:layout_marginBottom="137dp"
+        android:background="@drawable/botones"
+        android:onClick="Agregar_usu"
+        android:text="Agregar usuario"
+        android:textColor="#ffffff"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="303dp" />
 
 </RelativeLayout>

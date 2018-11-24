@@ -28,23 +28,24 @@ public class login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-         datos_prim.sqLite= new ConexionSQLite(this);
+        datos_prim.sqLite= new ConexionSQLite(this);
         datos_prim.cursor=this.viewsqlite();
-        int layout= R.layout.activity_login;
-        if(datos_prim.cursor.getCount()>0){
-            startActivity(new Intent(getBaseContext(),menu_epi.class)
-                    .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP));
-            finish();
+        int layout= R.layout.activity_login;//se indica con que actividad debe iniciar
+        if(datos_prim.cursor.getCount()>0){//se verifica que existan datos en la base de datos sqlite
+            Intent menu = new Intent(getApplicationContext(), menu_epi.class);
+            startActivity(menu);
+            finish();//y se finaliza la anterior
         }
         setContentView(layout);
         inicio();
     }
 
-    private Cursor viewsqlite(){
+    private Cursor viewsqlite(){//se indica que seleccione el primer registro existente
         String sql="select * from usuario limit 1";
         return datos_prim.sqLite.consultaSQL(sql);
     }
 
+    //metodos incompletos
     public void ini_se(View view){
         String Contra=Contraseña.getText().toString();
         login(Contra);

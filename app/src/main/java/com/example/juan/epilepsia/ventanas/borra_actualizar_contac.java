@@ -1,4 +1,4 @@
-package com.example.juan.epilepsia;
+package com.example.juan.epilepsia.ventanas;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.juan.epilepsia.R;
+import com.example.juan.epilepsia.datos_contacto;
 import com.example.juan.epilepsia.ventanas.alarma;
 
 import static android.widget.Toast.LENGTH_LONG;

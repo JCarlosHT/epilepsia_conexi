@@ -36,7 +36,7 @@ public class Regis_us extends AppCompatActivity {
         request= Volley.newRequestQueue(this);
         ini();
     }
-
+    //en esta parte se almacenan los datos del usuario para poder ser mandados a la base de datos
     private void ini(){
         nombre=(EditText) findViewById(R.id.editText);
         apelli_p=(EditText) findViewById(R.id.editText2);
@@ -58,6 +58,7 @@ public class Regis_us extends AppCompatActivity {
         vacios(re);
     }
 
+    //dependiendo del tipo de usuario se decide a donde mandan los datos como la verificacion de los campos
     private void vacios(int re){
         if (TextUtils.isEmpty(datosPrim.getNombre())|| TextUtils.isEmpty(datosPrim.getApelli_pater())||TextUtils.isEmpty(datosPrim.getApelli_mater())||TextUtils.isEmpty(datosPrim.getCorreo())||TextUtils.isEmpty(datos_prim.Us_nom)||TextUtils.isEmpty(datosPrim.getContra())){
             Toast.makeText(this,"Complete todos los datos",Toast.LENGTH_SHORT).show();

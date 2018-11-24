@@ -38,7 +38,7 @@
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
         android:textSize="18sp"
-        android:theme="@style/CampoTexto1" />/>
+        android:theme="@style/CampoTexto1" />
 
     <EditText
         android:id="@+id/Contraseña"
@@ -91,5 +91,6 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="26dp"
+        android:alpha=".90"
         android:src="@drawable/lg" />
 </RelativeLayout>

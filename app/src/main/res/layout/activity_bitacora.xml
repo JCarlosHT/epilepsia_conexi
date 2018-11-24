@@ -1,9 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".bitacora">
+    android:background="@drawable/fondo"
+    tools:context=".ventanas.bitacora">
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="0dp"
+        app:srcCompat="@android:color/background_light" />
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="61dp"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        app:srcCompat="@drawable/house"
+        android:onClick="inicio1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="16dp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="59dp"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="101dp"
+        app:srcCompat="@drawable/network"
+        android:layout_alignParentLeft="true"
+        android:onClick="repo1"
+        android:layout_marginLeft="101dp" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="57dp"
+        android:layout_height="51dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="121dp"
+        app:srcCompat="@drawable/notebook" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="54dp"
+        android:layout_height="51dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="39dp"
+        android:onClick="alar1"
+        app:srcCompat="@drawable/alarm" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+
+        app:srcCompat="@color/colorPrimary" />
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        app:srcCompat="@color/colorPrimary" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Bitacora"
+        android:textColor="#0011ff"
+        android:textSize="30sp" />
+
+</RelativeLayout>
+
+
+

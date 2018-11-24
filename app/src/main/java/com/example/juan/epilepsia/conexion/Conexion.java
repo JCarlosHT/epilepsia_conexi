@@ -8,40 +8,43 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.juan.epilepsia.datos_alerta_repo;
 import com.example.juan.epilepsia.datos_contacto;
 import com.example.juan.epilepsia.datos_prim;
 import com.example.juan.epilepsia.sqlite.ConexionSQLite;
 import org.json.JSONObject;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 
-public class Conexion {
-
-    ArrayList<String> lista1;
+public class Conexion  {
+    public String latitu, longitud,direccion;
+    public  ArrayList<String> lista1;
     RequestQueue request;
     public void inicio(Context context)
     {
         Context context1=context;
         request= Volley.newRequestQueue(context1);
-        datos_contacto.sqLite= new ConexionSQLite(context1);
-        lista1=this.viewsqlite();
-        conexion();
+        try {
+            conexion();
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
     }
 
-    private ArrayList viewsqlite(){
-        String sql="select * from Contacto ";
-        return datos_contacto.sqLite.llenarlista(sql);
-    }
-
-    public void conexion() {
+    //en este metodo se manda la informacion que se va a guardar en la base de datos
+    public void conexion() throws UnsupportedEncodingException {
         for (int x = 0; x < lista1.size(); x++) {
-            String URL = datos_prim.direccion + "/android/push.php?registration_ids=" + lista1.get(x).toString();
+            //esta es la url que se va a enviar al servicio web de php
+            String URL = datos_prim.direccion + "/android/push.php?latitud=" + latitu + "&longitud=" + longitud + "&direccion=" + URLEncoder.encode(direccion, "UTF-8") + "&registration_ids=" + lista1.get(x).toString();
+            //lo siguiente hace un remplazo de los caractareres especificos
             URL = URL.replace(" ", "%20");
             URL = URL.replace("[", "");
             URL = URL.replace("]", "");
             URL = URL.replace("\"", "");
-
-            Log.e("valor", "" + URL);
-            JsonObjectRequest getRequest = new JsonObjectRequest(Request.Method.GET, URL, null,
+            Log.e("valor", "" + URLEncoder.encode(direccion, "UTF-8"));
+            JsonObjectRequest getRequest = new JsonObjectRequest(Request.Method.GET, URL, null,//se crea una respuesta paraenviar
                     new Response.Listener <JSONObject>() {
                         @Override
                         public void onResponse(JSONObject response) {

@@ -14,4 +14,5 @@
     <string name="title_activity_mp_cont">Map</string>
     <string name="title_activity_mapa_ubicacion">Map</string>
     <string name="title_activity_maps">Map</string>
+    <string name="x">X</string>
 </resources>

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.example.juan.epilepsia.R;
 import com.google.android.gms.common.ConnectionResult;

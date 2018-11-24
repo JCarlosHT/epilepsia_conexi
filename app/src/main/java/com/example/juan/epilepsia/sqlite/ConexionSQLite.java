@@ -5,6 +5,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -15,8 +17,9 @@ public class ConexionSQLite{
     String nombre_base = "bd";// nombre de la base de datos
     int version = 1;
     String[] tablas = {"create table usuario (id INTEGER PRIMARY KEY AUTOINCREMENT, nombre text, apellido_pater text, apellido_mater text, correo text,Us_nom text, Contra text, token text)",
-            "create table Contacto (id INTEGER PRIMARY KEY AUTOINCREMENT, nombre_cont text, correo text, token text)"};///Aqui van todas las tablas a crear,
-    // en caso de que se les olvide agregar una desinstalar la aplicacion y volverla a ejecutar para cargar todas las tablas
+                        "create table Contacto (id INTEGER PRIMARY KEY AUTOINCREMENT, nombre_cont text, correo text, token text,nombre text,apellido text,relacion text)",
+                        "create table Datos_medi (id INTEGER PRIMARY KEY AUTOINCREMENT, Edad int, sexo text, tipo_san text, hospital_pre text)"};///Aqui van todas las tablas a crear,
+    // para hacer modificaciones a la base de datos borrar la aplicacion e instalar nuevamente
     public ConexionSQLite(Context context)
     {
         this.context = context;
@@ -60,16 +63,42 @@ public class ConexionSQLite{
         }
     }
 
-    public ArrayList llenarlista(String sql)// consultas select * from .....
+    public ArrayList llenarlista(String sql, int bandera)// consultas select * from para llenar las listas de las diferentes clases
     {
         ArrayList lista=new ArrayList();
         try {
             this.Abrir();
             Cursor c = bd.rawQuery(sql,null);
             if(c.moveToFirst()){
-                do {
-                    lista.add(c.getString(3));
-                }while (c.moveToNext());
+                if (bandera==1){
+                    do {
+                        lista.add(c.getString(3));
+                    }while (c.moveToNext());
+                }else if (bandera==2){
+                    do {
+                        String datos="";
+                        datos=c.getString(0)+ " "+c.getString(4)+ " "+c.getString(5)+ " "+c.getString(6);
+                        lista.add(datos);
+                        Log.e("valor", "" + datos);
+                    }while (c.moveToNext());
+                }else if (bandera==3){
+
+                    do {
+                        String datos="";
+                        datos=c.getString(1)+ " "+c.getString(2)+ " "+c.getString(3);
+                        lista.add(datos);
+                        lista.add(c.getString(5));
+                        lista.add(c.getString(4));
+                    }while (c.moveToNext());
+                }else if (bandera==4){
+                    do {
+                         lista.add(c.getString(4));/*
+                        lista.add(c.getString(5));
+                        lista.add(c.getString(4));*/
+                    }while (c.moveToNext());
+                }
+            }else{
+                lista.add("0");
             }
             return lista;
         }catch (SQLiteException s)
