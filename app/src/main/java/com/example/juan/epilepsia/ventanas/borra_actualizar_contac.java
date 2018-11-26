@@ -45,7 +45,7 @@ public class borra_actualizar_contac extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "faltan datos", LENGTH_LONG).show();
         }else
         {
-            if(addusuario()){
+            if(updateusu()){
                 Toast.makeText(getApplicationContext(), "Contacto Modificado", LENGTH_LONG).show();
                 Intent menu = new Intent(getApplicationContext(),alarma.class);
                 menu.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -75,7 +75,7 @@ public class borra_actualizar_contac extends AppCompatActivity {
         return datos_contacto.sqLite.ejecutaSQL(sql);
     }
 
-    private boolean addusuario(){
+    private boolean updateusu(){
         String sql="Update Contacto set nombre='"+datos1[0].getText().toString()+"',apellido='"+datos1[1].getText().toString()+"',relacion='"+datos1[2].getText().toString()+
                 "'where id='"+id+"';";
         Log.e("valor","cadena: "+sql);

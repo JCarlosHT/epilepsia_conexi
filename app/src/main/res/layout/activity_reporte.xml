@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo"
-    tools:context=".ventanas.reporte">
+    tools:context=".Reporte.reporte">
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
@@ -29,7 +29,7 @@
         android:layout_marginLeft="16dp" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/reporte"
         android:layout_width="59dp"
         android:layout_height="52dp"
         android:layout_alignParentBottom="true"
@@ -50,7 +50,7 @@
         app:srcCompat="@drawable/notebook" />
 
     <ImageView
-        android:id="@+id/imageView11"
+        android:id="@+id/alarmas"
         android:layout_width="54dp"
         android:layout_height="51dp"
         android:layout_alignParentBottom="true"

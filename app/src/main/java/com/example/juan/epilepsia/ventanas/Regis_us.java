@@ -15,6 +15,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.juan.epilepsia.Contacto_ventanas.Menu_contacto;
 import com.example.juan.epilepsia.datos_prim;
 import com.example.juan.epilepsia.sqlite.ConexionSQLite;
 import com.example.juan.epilepsia.R;
@@ -87,12 +88,12 @@ public class Regis_us extends AppCompatActivity {
                 {
                     @Override
                     public void onResponse(JSONArray response) {
-                        boolean o=addusuario();
+                        boolean o=Addcontact();
                         if (o){
                             Toast.makeText(getApplicationContext(), "registro completo", LENGTH_LONG).show();
-                            Intent menu = new Intent(getApplicationContext(),menu_epi.class);
-                            menu.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                            Intent menu = new Intent(getApplicationContext(), Menu_contacto.class);
                             startActivity(menu);
+                            finish();
                         }else
                         {
                             Log.e("error",String.valueOf(o));
@@ -111,8 +112,10 @@ public class Regis_us extends AppCompatActivity {
         request.add(getRequest);
     }
 
-    private boolean addusuario(){
-        String sql="insert into usuario values('1','"+datosPrim.getNombre()+"','"+datosPrim.getApelli_pater()+"','"+datosPrim.getApelli_mater()+"','"+datosPrim.getCorreo()+"','"+datos_prim.Us_nom+"','"+datosPrim.getContra()+"','"+datosPrim.token+"');";
+    //agrega al contacto en un tabla llamada contacto_da por datos
+    private boolean Addcontact(){
+        String sql="insert into Contacto_da values('1','"+datosPrim.getNombre()+"','"+datosPrim.getApelli_pater()+"','"+datosPrim.getApelli_mater()+"','"+datosPrim.getCorreo()+"','"+datos_prim.Us_nom+"','"+datosPrim.getContra()+"','"+datosPrim.token+"');";
+        Log.e("cadena","contacto"+sql);
         return datosPrim.sqLite.ejecutaSQL(sql);
     }
 

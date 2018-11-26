@@ -25,7 +25,9 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".Service_notifi" />
+        <service android:name=".Reporte.Service_notifi" />
+
+        <receiver android:name=".recordatorio.servicio_recor" />
 
         <activity
             android:name=".ventanas.login"
@@ -81,10 +83,17 @@
             android:label="@string/title_activity_mapa_ubicacion" />
         <activity android:name=".ventanas.tipo_regis$bitacora" />
         <activity android:name=".ventanas.bitacora" />
-        <activity android:name=".ventanas.recordatorio" />
-        <activity android:name=".ventanas.reporte" />
+        <activity
+            android:name=".recordatorio.recordatorio"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Reporte.reporte" />
         <activity android:name=".ventanas.borra_actualizar_contac" />
-        <activity android:name=".ventanas.Alerta_repo"></activity>
+        <activity android:name=".ventanas.Alerta_repo" />
+        <activity android:name=".recordatorio.agregar_recorda" />
+        <activity
+            android:name=".recordatorio.Borra_actua_recor"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".Contacto_ventanas.Menu_contacto"></activity>
     </application>
 
 </manifest>

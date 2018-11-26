@@ -29,7 +29,7 @@
         android:layout_marginLeft="16dp" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/reporte"
         android:layout_width="59dp"
         android:layout_height="52dp"
         android:layout_alignParentBottom="true"
@@ -50,7 +50,7 @@
         app:srcCompat="@drawable/notebook" />
 
     <ImageView
-        android:id="@+id/imageView11"
+        android:id="@+id/alarmas"
         android:layout_width="54dp"
         android:layout_height="51dp"
         android:layout_alignParentBottom="true"
@@ -60,22 +60,24 @@
         app:srcCompat="@drawable/alarm" />
 
     <ImageView
-        android:id="@+id/imageView12"
+        android:id="@+id/imageView12titu"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@color/colorPrimary"
+        app:srcCompat="@color/colorPrimary" />
 
-        app:srcCompat="@color/colorPrimary" />
     <ImageView
-        android:id="@+id/imageView12"
+        android:id="@+id/conte"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:alpha=".80"
         android:background="@color/colorPrimary"
         app:srcCompat="@color/colorPrimary" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -85,6 +87,39 @@
         android:text="Bitacora"
         android:textColor="#0011ff"
         android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="321dp"
+        android:layout_height="338dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="85dp"
+        android:alpha=".80"
+        app:srcCompat="@color/colorPrimary" />
+
+    <ListView
+        android:id="@+id/listview_bitaco"
+        android:layout_width="345dp"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="58dp"
+        android:background="#CCfff8f8" />
+
+    <EditText
+        android:id="@+id/otros_datos"
+        android:layout_width="292dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageView13"
+        android:layout_alignTop="@+id/imageView13"
+        android:ems="10"
+        android:hint="Otros datos"
+        android:inputType="text"
+        android:textColor="#0011ff"
+        android:textColorHint="#0011ff"
+        android:theme="@style/Campos_alar" />
+
 
 </RelativeLayout>
 

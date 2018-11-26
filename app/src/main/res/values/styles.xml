@@ -10,7 +10,13 @@
     </style>
 
     <style name="CampoTexto1" parent="Theme.AppCompat.Light">
-        <item name="colorControlNormal">#ffffff</item>
+        <item name="colorControlNormal">#FFFFFF</item>
+        <item name="colorControlActivated">#0011ff</item>
+
+    </style>
+
+    <style name="Campos_alar" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">#0011ff</item>
         <item name="colorControlActivated">#0011ff</item>
 
     </style>
@@ -23,5 +29,11 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="datepicker" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+    </style>
 
 </resources>

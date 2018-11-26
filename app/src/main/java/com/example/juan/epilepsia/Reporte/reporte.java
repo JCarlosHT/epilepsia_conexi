@@ -1,4 +1,4 @@
-package com.example.juan.epilepsia.ventanas;
+package com.example.juan.epilepsia.Reporte;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.juan.epilepsia.R;
+import com.example.juan.epilepsia.recordatorio.recordatorio;
+import com.example.juan.epilepsia.ventanas.bitacora;
+import com.example.juan.epilepsia.ventanas.menu_epi;
 
 public class reporte extends AppCompatActivity {
 

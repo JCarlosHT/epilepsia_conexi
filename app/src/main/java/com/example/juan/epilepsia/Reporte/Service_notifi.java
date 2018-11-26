@@ -1,4 +1,4 @@
-package com.example.juan.epilepsia;
+package com.example.juan.epilepsia.Reporte;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -15,6 +15,8 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
 import android.util.Log;
 
+import com.example.juan.epilepsia.R;
+import com.example.juan.epilepsia.conexion_server.Conexion;
 import com.example.juan.epilepsia.ventanas.mapa_ubicacion;
 import com.example.juan.epilepsia.ventanas.menu_epi;
 public class Service_notifi extends Service {
@@ -28,7 +30,6 @@ public class Service_notifi extends Service {
 
     @Override
     public int onStartCommand(Intent intent,int flag,int idProcess){
-        Log.e("SErvicio", "se inicio el servicio");
         createNotification();//se crea la notificacion para mandar informacion
         return START_STICKY;
     }
@@ -37,7 +38,7 @@ public class Service_notifi extends Service {
         NotificationCompat.Builder Builder = new NotificationCompat.Builder(this)
                 .setContentTitle("Alerta de emergencia")
                 .setContentText("Alerta de epilepsia app")
-                .setSmallIcon(R.drawable.ic_access_alarm_black_24dp)
+                .setSmallIcon(R.drawable.ic_add_alert_black_24dp)
                 .setColor(Color.RED)
                 //DEFAULT_NOTIFICATION_URI //DEFAULT_ALARM_ALERT_URI
                 .setPriority(Notification.PRIORITY_HIGH);
@@ -46,6 +47,7 @@ public class Service_notifi extends Service {
         PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, i, PendingIntent.FLAG_ONE_SHOT);
         Builder.setContentIntent(pendingIntent);
         NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        Conexion.bandera=2;
         notificationManager.notify(0, Builder.build());
 
         /*NotificationCompat.Builder builder = new NotificationCompat.Builder(thiscontext, CHANNEL_ID);

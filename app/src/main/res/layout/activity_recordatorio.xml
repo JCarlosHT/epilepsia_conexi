@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo"
-    tools:context=".ventanas.recordatorio">
+    tools:context=".recordatorio.recordatorio">
+
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
@@ -14,22 +15,23 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="0dp"
+        android:alpha=".80"
         app:srcCompat="@android:color/background_light" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/home"
         android:layout_width="61dp"
         android:layout_height="52dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="16dp"
-        app:srcCompat="@drawable/house"
-        android:onClick="inicio2"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="16dp" />
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:onClick="inicio2"
+        app:srcCompat="@drawable/house" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/reporte"
         android:layout_width="59dp"
         android:layout_height="52dp"
         android:layout_alignParentBottom="true"
@@ -41,7 +43,7 @@
         android:layout_marginLeft="101dp" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/bitacora"
         android:layout_width="57dp"
         android:layout_height="51dp"
         android:layout_alignParentBottom="true"
@@ -51,7 +53,7 @@
         app:srcCompat="@drawable/notebook" />
 
     <ImageView
-        android:id="@+id/imageView11"
+        android:id="@+id/alarmas"
         android:layout_width="54dp"
         android:layout_height="51dp"
         android:layout_alignParentBottom="true"
@@ -66,16 +68,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@color/colorPrimary"
-        app:srcCompat="@color/colorPrimary" />
-
-    <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:background="@color/colorPrimary"
-        app:srcCompat="@color/colorPrimary" />
+        app:srcCompat="@color/colorPrimary"
+        android:alpha=".80"/>
 
     <TextView
         android:id="@+id/textView2"
@@ -86,5 +80,27 @@
         android:text="Recordatorio"
         android:textColor="#0011ff"
         android:textSize="30sp" />
+
+    <ListView
+        android:id="@+id/lista_recor"
+        android:layout_width="323dp"
+        android:layout_height="435dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:background="#CCfff8f8" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="57dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="91dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/agregar"
+        app:backgroundTint="@color/fondo"
+        android:onClick="nuevo_reco"
+        android:layout_marginRight="30dp" />
 
 </RelativeLayout>

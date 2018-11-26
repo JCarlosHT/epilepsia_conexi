@@ -9,21 +9,26 @@ import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v4.app.NotificationCompat.Builder;
 import android.util.Log;
+
+import com.example.juan.epilepsia.Contacto_ventanas.Menu_contacto;
 import com.example.juan.epilepsia.ventanas.mapa_ubicacion;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService{
     private static final String LOGTAG = "android-fcm";
-    String latitud,longitud,Direccion;
+    String []datos_aler=new String[6];
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
             String titulo = "Emergencia";
             String texto = "El usuario ";
-            Direccion=remoteMessage.getData().get("mensaje");
-            latitud=remoteMessage.getData().get("latitud");
-            longitud=remoteMessage.getData().get("longitud");
+            datos_aler[2]=remoteMessage.getData().get("Direccion");
+            datos_aler[0]=remoteMessage.getData().get("latitud");
+            datos_aler[1]=remoteMessage.getData().get("longitud");
+            datos_aler[3]=remoteMessage.getData().get("nombre");
+            datos_aler[4]=remoteMessage.getData().get("tipo_s");
+            datos_aler[5]=remoteMessage.getData().get("hospital");
             Log.e(LOGTAG, "NOTIFICACION RECIBIDA");
             Log.e(LOGTAG, "Título: " + titulo);
             Log.e(LOGTAG, "Texto: " + texto);
@@ -44,10 +49,11 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService{
                         .setSound(Uri.withAppendedPath(MediaStore.Audio.Media.INTERNAL_CONTENT_URI, "7"))
                         .setDefaults(Notification.DEFAULT_LIGHTS | Notification.DEFAULT_VIBRATE);
 
-        Intent i=new Intent(this,mapa_ubicacion.class);
-        i.putExtra("latitud",latitud);
-        i.putExtra("longitud",longitud);
-        i.putExtra("direc",Direccion);
+        Intent i=new Intent(this,Menu_contacto.class);
+        i.putExtra("bande",1);
+        i.putExtra("dato_alerta",datos_aler);
+        /*i.putExtra("longitud",longitud);
+        i.putExtra("direc",Direccion);*/
         PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, i, PendingIntent.FLAG_ONE_SHOT);
         Builder.setContentIntent(pendingIntent);
         NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);

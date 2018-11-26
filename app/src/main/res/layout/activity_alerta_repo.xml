@@ -11,6 +11,27 @@
     android:padding="5dp"
     android:layout_gravity="center">
 
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="341dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:alpha=".80"
+        android:background="@color/colorPrimary"
+        android:onClick="alar"
+        app:srcCompat="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Emengencia"
+        android:textColor="#0011ff"
+        android:textSize="30sp" />
+
     <TextView
         android:id="@+id/cerrar"
         android:layout_width="30dp"
@@ -18,11 +39,11 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
         android:layout_gravity="right"
-        android:layout_marginEnd="18dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="12dp"
         android:gravity="center"
         android:text="@string/x"
-        android:textColor="@color/colorPrimary"
+        android:textColor="#000000"
         android:textStyle="bold" />
 
     <TextView
@@ -31,21 +52,100 @@
         android:layout_height="22dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="70dp"
-        android:text="Ubicacion"
+        android:layout_marginTop="72dp"
+        android:text="Usuario"
         android:textColor="@color/colorPrimary"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/ubica"
-        android:layout_width="wrap_content"
+        android:id="@+id/usuario_aler"
+        android:layout_width="216dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignTop="@+id/textView4"
-        android:layout_marginStart="117dp"
+        android:layout_marginStart="111dp"
         android:text="TextView"
         android:textColor="@color/colorPrimary"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="222dp"
         tools:layout_editor_absoluteY="114dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="75dp"
+        android:layout_height="22dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="118dp"
+        android:text="Ubicacion"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/ubicacion_aler"
+        android:layout_width="216dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/cerrar"
+        android:layout_alignTop="@+id/textView5"
+        android:text="TextView"
+        android:textColor="@color/colorPrimary"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="222dp"
+        tools:layout_editor_absoluteY="114dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="165dp"
+        android:text="Tipo de sangre"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tipo_s_aler"
+        android:layout_width="188dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView6"
+        android:layout_toStartOf="@+id/cerrar"
+        android:text="TextView"
+        android:textColor="@color/colorPrimary"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="222dp"
+        tools:layout_editor_absoluteY="114dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_alignBottom="@+id/hospi_aler"
+        android:layout_alignParentStart="true"
+        android:text="Hospital de preferencia"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/hospi_aler"
+        android:layout_width="166dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="213dp"
+        android:text="TextView"
+        android:textColor="@color/colorPrimary"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="222dp"
+        tools:layout_editor_absoluteY="114dp" />
+
+    <Button
+        android:id="@+id/Generar_mapa"
+        android:layout_width="246dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/botones"
+        android:text="Generar mapa"
+        android:textColor="#ffffff" />
     </RelativeLayout>

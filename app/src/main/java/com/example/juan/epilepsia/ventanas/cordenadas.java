@@ -25,8 +25,7 @@ import com.android.volley.VolleyError;
  import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.juan.epilepsia.R;
-import com.example.juan.epilepsia.conexion.Conexion;
-import com.example.juan.epilepsia.datos_alerta_repo;
+import com.example.juan.epilepsia.conexion_server.Conexion;
 import com.example.juan.epilepsia.datos_contacto;
 import com.example.juan.epilepsia.datos_prim;
 import com.example.juan.epilepsia.sqlite.ConexionSQLite;
@@ -60,7 +59,7 @@ public class cordenadas extends AppCompatActivity implements LocationListener{//
         datos_contacto.sqLite= new ConexionSQLite(this);
         if(bande==1){//se hace una validacion para entrar en instrucciones posteriores
             lista1=this.viewsqlite();//se rellena la lista
-            inicio();
+            iniciar_servi();
             Toast.makeText(getApplicationContext(), "Alerta enviada", LENGTH_LONG).show();
             startActivity(new Intent(getBaseContext(),menu_epi.class)
                     .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP));
@@ -161,7 +160,7 @@ public class cordenadas extends AppCompatActivity implements LocationListener{//
         return datos_contacto.sqLite.ejecutaSQL(sql);
     }
 
-    public void  inicio(){
+    public void  iniciar_servi(){
         do {
             inicio_ser();//es el servicio de localizacion
             Log.e("valor","va");
@@ -231,6 +230,7 @@ public class cordenadas extends AppCompatActivity implements LocationListener{//
         con.longitud=longitud;
         con.direccion=direccion;
         con.inicio(getBaseContext());
+        con.bandera=1;
     }
 
 

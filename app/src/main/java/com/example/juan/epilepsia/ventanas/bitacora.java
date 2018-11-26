@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.juan.epilepsia.R;
+import com.example.juan.epilepsia.recordatorio.recordatorio;
 
 public class bitacora extends AppCompatActivity {
 

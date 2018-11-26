@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".recordatorio.agregar_recorda">
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="333dp"
+        android:layout_height="338dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="67dp"
+        android:alpha=".80"
+        app:srcCompat="@color/colorPrimary" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="0dp"
+        android:alpha=".80"
+        app:srcCompat="@android:color/background_light" />
+
+    <ImageView
+        android:id="@+id/inicio_ag"
+        android:layout_width="61dp"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:onClick="inicio_EB"
+        app:srcCompat="@drawable/house" />
+
+    <ImageView
+        android:id="@+id/reporte_ag"
+        android:layout_width="59dp"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="101dp"
+        app:srcCompat="@drawable/network"
+        android:layout_alignParentLeft="true"
+        android:onClick="repo_EB"
+        android:layout_marginLeft="101dp" />
+
+    <ImageView
+        android:id="@+id/bitacora_ag"
+        android:layout_width="57dp"
+        android:layout_height="51dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="121dp"
+        android:onClick="Bita_EB"
+        app:srcCompat="@drawable/notebook" />
+
+    <ImageView
+        android:id="@+id/alarmas"
+        android:layout_width="54dp"
+        android:layout_height="51dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="39dp"
+        app:srcCompat="@drawable/alarm" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        app:srcCompat="@color/colorPrimary"
+        android:alpha=".80"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Agregar recordatorio"
+        android:textColor="#0011ff"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/medicina"
+        android:layout_width="329dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="98dp"
+        android:ems="10"
+        android:hint="Medicina a tomar"
+        android:inputType="text"
+        android:textColor="#0011ff"
+        android:textColorHint="#0011ff"
+        android:theme="@style/Campos_alar" />
+
+    <EditText
+        android:id="@+id/dosis"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:ems="10"
+        android:hint="Dosis que tomar"
+        android:inputType="text"
+        android:textColor="#0011ff"
+        android:textColorHint="#0011ff"
+        android:theme="@style/Campos_alar" />
+
+    <EditText
+        android:id="@+id/otros_datos"
+        android:layout_width="292dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/imageView13"
+        android:layout_marginTop="293dp"
+        android:ems="10"
+        android:hint="Otros datos"
+        android:inputType="text"
+        android:textColor="#0011ff"
+        android:textColorHint="#0011ff"
+        android:theme="@style/Campos_alar" />
+
+    <Button
+        android:id="@+id/Fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/imageView13"
+        android:layout_marginTop="203dp"
+        android:background="@drawable/botones"
+        android:text="Fecha"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/Fecha_tex"
+        android:layout_width="102dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Fecha"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="148dp"
+        android:text="Fecha"
+        android:textColor="#0011ff" />
+
+    <Button
+        android:id="@+id/Hora"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/imageView13"
+        android:layout_marginTop="244dp"
+        android:background="@drawable/botones"
+        android:text="hora"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/Hora_tex"
+        android:layout_width="102dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/Hora"
+        android:layout_alignStart="@+id/Fecha_tex"
+        android:text="Hora"
+        android:textColor="#0011ff" />
+
+    <Button
+        android:id="@+id/agregar_recorda"
+        android:layout_width="217dp"
+        android:layout_height="34dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="116dp"
+        android:background="@drawable/botones"
+        android:onClick="Agregar_recodatorio"
+        android:text="Agregar"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>

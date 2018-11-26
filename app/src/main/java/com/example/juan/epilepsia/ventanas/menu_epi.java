@@ -1,35 +1,19 @@
 package com.example.juan.epilepsia.ventanas;
 
 import android.app.Dialog;
-import android.app.Service;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
+
 import com.example.juan.epilepsia.R;
-import com.example.juan.epilepsia.Service_notifi;
-import com.example.juan.epilepsia.datos_alerta_repo;
+import com.example.juan.epilepsia.Reporte.Service_notifi;
 import com.example.juan.epilepsia.datos_contacto;
 import com.example.juan.epilepsia.datos_prim;
+import com.example.juan.epilepsia.recordatorio.recordatorio;
 import com.example.juan.epilepsia.sqlite.ConexionSQLite;
 
-
-import org.json.JSONArray;
-import org.json.JSONException;
 
 import java.util.ArrayList;
 
@@ -47,8 +31,7 @@ public class menu_epi extends AppCompatActivity {
         Bundle datos = this.getIntent().getExtras();
         if(datos != null) {
             bande=datos.getInt("bande");//se resibe una bandera de otro intent
-        }else{
-         }
+        }
         startService(new Intent(getBaseContext(), Service_notifi.class));
         datos1[0]=  findViewById(R.id.Nombre_ini);///en el siguiente se incian las variables del sistema
         datos1[1]=  findViewById(R.id.Nombre_usu_ini);//para pintar los text file quiere decir que entra a pintar
@@ -106,7 +89,7 @@ public class menu_epi extends AppCompatActivity {
     }
 
     public void repo(View view) {
-        Intent reporte = new Intent(this,reporte.class);
+        Intent reporte = new Intent(this, com.example.juan.epilepsia.Reporte.reporte.class);
         startActivity(reporte);
     }
 
