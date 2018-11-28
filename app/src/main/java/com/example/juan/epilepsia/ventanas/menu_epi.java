@@ -9,8 +9,10 @@ import android.widget.TextView;
 
 import com.example.juan.epilepsia.R;
 import com.example.juan.epilepsia.Reporte.Service_notifi;
+import com.example.juan.epilepsia.Bitacora.bitacora;
 import com.example.juan.epilepsia.datos_contacto;
 import com.example.juan.epilepsia.datos_prim;
+import com.example.juan.epilepsia.paginaweb;
 import com.example.juan.epilepsia.recordatorio.recordatorio;
 import com.example.juan.epilepsia.sqlite.ConexionSQLite;
 
@@ -81,21 +83,29 @@ public class menu_epi extends AppCompatActivity {
     public void continuar(View view){
         Intent r = new Intent(getApplicationContext(),alarma.class);
         startActivity(r);
+       /* Intent r = new Intent(getApplicationContext(),paginaweb.class);
+        startActivity(r);*/
     }
 
     public void bita(View view) {
-        Intent bitacora = new Intent(this,bitacora.class);
-        startActivity(bitacora);
+        Intent bitaco = new Intent(this, bitacora.class);
+        startActivity(bitaco);
+        overridePendingTransition(R.anim.left_in, R.anim.left_out);
+        finish();
     }
 
     public void repo(View view) {
         Intent reporte = new Intent(this, com.example.juan.epilepsia.Reporte.reporte.class);
         startActivity(reporte);
+        overridePendingTransition(R.anim.left_in, R.anim.left_out);
+        finish();
     }
 
     public void alar(View view) {
         Intent a = new Intent(this,recordatorio.class);
         startActivity(a);
+        overridePendingTransition(R.anim.left_in, R.anim.left_out);
+        finish();
     }
 
 }

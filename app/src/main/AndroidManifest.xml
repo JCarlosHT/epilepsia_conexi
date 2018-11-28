@@ -81,19 +81,33 @@
         <activity
             android:name=".ventanas.mapa_ubicacion"
             android:label="@string/title_activity_mapa_ubicacion" />
-        <activity android:name=".ventanas.tipo_regis$bitacora" />
-        <activity android:name=".ventanas.bitacora" />
         <activity
             android:name=".recordatorio.recordatorio"
             android:screenOrientation="portrait" />
-        <activity android:name=".Reporte.reporte" />
-        <activity android:name=".ventanas.borra_actualizar_contac" />
-        <activity android:name=".ventanas.Alerta_repo" />
-        <activity android:name=".recordatorio.agregar_recorda" />
+        <activity
+            android:name=".Reporte.reporte"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ventanas.borra_actualizar_contac"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ventanas.Alerta_repo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".recordatorio.agregar_recorda"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".recordatorio.Borra_actua_recor"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".Contacto_ventanas.Menu_contacto"></activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".Contacto_ventanas.Menu_contacto" />
+        <activity android:name=".Bitacora.bitacora" />
+        <activity
+            android:name=".paginaweb"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Reporte.Repote_info"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Estadisticas"></activity>
     </application>
 
 </manifest>

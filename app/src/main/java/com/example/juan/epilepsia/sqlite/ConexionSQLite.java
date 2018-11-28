@@ -21,7 +21,8 @@ public class ConexionSQLite{
                         "create table Contacto (id INTEGER PRIMARY KEY AUTOINCREMENT, nombre_cont text, correo text, token text,nombre text,apellido text,relacion text)",
                         "create table Datos_medi (id INTEGER PRIMARY KEY AUTOINCREMENT, Edad int, sexo text, tipo_san text, hospital_pre text)",
                         "create table Recordatorio (id INTEGER PRIMARY KEY AUTOINCREMENT, medicina text, dosis text, fecha text, hora text, otros text)",
-                        "create table Alarma (id INTEGER PRIMARY KEY AUTOINCREMENT, direccion text, sin_previos text, ti_ataque text,grad_ata text,fecha text, hora text, otros text)"};///Aqui van todas las tablas a crear,
+                        "create table Alarma (id INTEGER PRIMARY KEY AUTOINCREMENT, direccion text, sin_previos text, ti_ataque text,grad_ata text,fecha text, hora text, otros text)",
+                        "create table Reporte_contact (id INTEGER PRIMARY KEY AUTOINCREMENT, direccion text, Nombre text, fecha text, hora text, otros text)"};///Aqui van todas las tablas a crear,
     // para hacer modificaciones a la base de datos borrar la aplicacion e instalar nuevamente
     public ConexionSQLite(Context context)
     {
@@ -154,30 +155,26 @@ public class ConexionSQLite{
                         lista.add(c.getString(5));
                     }while (c.moveToNext());
                 }else if (bandera==3){
-
                     do {
-                        datos=c.getString(1)+ " "+c.getString(2)+ " "+c.getString(3);
+                        datos=c.getString(0)+" ,"+c.getString(1)+", "+c.getString(2)+", "+c.getString(3)+", "+
+                                c.getString(4)+", "+c.getString(5);
+                        Log.e("cadena",""+datos);
                         lista.add(datos);
-                        lista.add(c.getString(5));
-                        lista.add(c.getString(4));
                     }while (c.moveToNext());
                 }else if (bandera==4){
                     do {
-                        lista.add(c.getString(4));/*
+                        lista.add(c.getString(1));
+                        lista.add(c.getString(2));
+                        lista.add(c.getString(3));
+                        lista.add(c.getString(4));
                         lista.add(c.getString(5));
-                        lista.add(c.getString(4));*/
-                    }while (c.moveToNext());
-                }else if (bandera==5){
-                    do {
-                        datos=c.getString(0)+" "+c.getString(1)+" "+c.getString(2)+" "+c.getString(3);
-                        Log.e("cadena",""+datos);
-                        lista.add(datos);/*
-                        lista.add(c.getString(5));
-                        lista.add(c.getString(4));*/
+                        lista.add(c.getString(6));
+                        lista.add(c.getString(7));
                     }while (c.moveToNext());
                 }
             }else{
                 lista.add("0");
+                Log.e("cadena","no hay datos");
             }
             return lista;
         }catch (SQLiteException s)
@@ -187,6 +184,63 @@ public class ConexionSQLite{
         }
 
     }
+
+    public ArrayList llenar_repo(String sql, int bandera)// consultas select * from para llenar las listas de las diferentes clases
+    {
+        ArrayList lista=new ArrayList();
+        try {
+            this.Abrir();
+            Cursor c = bd.rawQuery(sql,null);
+            if(c.moveToFirst()){
+                String datos="";
+                if (bandera==1){
+                    do {
+                        lista.add(c.getString(1));
+                        lista.add(c.getString(2));
+                        lista.add(c.getString(3));
+                        lista.add(c.getString(4));
+                        lista.add(c.getString(5));
+                    }while (c.moveToNext());
+                }else if (bandera==2){
+                    do {
+                        lista.add(c.getString(0));
+                        lista.add(c.getString(1));
+                        lista.add(c.getString(2));
+                        lista.add(c.getString(3));
+                        lista.add(c.getString(4));
+                        lista.add(c.getString(5));
+                    }while (c.moveToNext());
+                }else if (bandera==3){
+                    do {
+                        datos=c.getString(0)+" ,"+c.getString(1)+", "+c.getString(2)+", "+c.getString(3)+", "+
+                                c.getString(4)+", "+c.getString(5);
+                        Log.e("cadena",""+datos);
+                        lista.add(datos);
+                    }while (c.moveToNext());
+                }else if (bandera==4){
+                    do {
+                        lista.add(c.getString(1));
+                        lista.add(c.getString(2));
+                        lista.add(c.getString(3));
+                        lista.add(c.getString(4));
+                        lista.add(c.getString(5));
+                        lista.add(c.getString(6));
+                        lista.add(c.getString(7));
+                    }while (c.moveToNext());
+                }
+            }else{
+                lista.add("0");
+                Log.e("cadena","no hay datos");
+            }
+            return lista;
+        }catch (SQLiteException s)
+        {
+            this.Cerrar();
+            return null;
+        }
+
+    }
+
 
     private class Helper extends SQLiteOpenHelper {
         public Helper(Context context) {

@@ -17,10 +17,9 @@ import android.widget.Toast;
 
 import com.example.juan.epilepsia.R;
 import com.example.juan.epilepsia.Reporte.reporte;
+import com.example.juan.epilepsia.Bitacora.bitacora;
 import com.example.juan.epilepsia.datos_contacto;
 import com.example.juan.epilepsia.sqlite.ConexionSQLite;
-import com.example.juan.epilepsia.ventanas.alarma;
-import com.example.juan.epilepsia.ventanas.bitacora;
 import com.example.juan.epilepsia.ventanas.menu_epi;
 
 import java.util.ArrayList;
@@ -151,16 +150,19 @@ public class Borra_actua_recor extends AppCompatActivity {
     public void inicio_EB(View view) {
         Intent inicio = new Intent(this, menu_epi.class);
         startActivity(inicio);
+        overridePendingTransition(R.anim.left_in, R.anim.left_out);
     }
 
     public void Bita_EB(View view) {
         Intent bita = new Intent(this, bitacora.class);
         startActivity(bita);
+        overridePendingTransition(R.anim.left_in, R.anim.left_out);
     }
 
     public void repo_EB(View view) {
         Intent a = new Intent(this,reporte.class);
         startActivity(a);
+        overridePendingTransition(R.anim.left_in, R.anim.left_out);
     }
 
 

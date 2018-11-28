@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="Emengencia"
+        android:text="Emergencia"
         android:textColor="#0011ff"
         android:textSize="30sp" />
 

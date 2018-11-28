@@ -2,6 +2,7 @@ package com.example.juan.epilepsia.conexion_server;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.util.Log;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -83,7 +84,7 @@ public class Conexion  {
         String URL = datos_prim.direccion + "/android/Reporte.php?nombre_usu="+ datos_prim.Us_nom +"&&ubicacion="+URLEncoder.encode(direccion, "UTF-8")+"&&fecha="+fecha+"&&hora="+hora;
         //lo siguiente hace un remplazo de los caractareres especificos
         URL = URL.replace(" ", "%20");
-
+        Log.e("hola",""+ URL);
         JsonObjectRequest getRequest = new JsonObjectRequest(Request.Method.GET, URL, null,//se crea una respuesta paraenviar
                 new Response.Listener <JSONObject>() {
                     @Override
@@ -114,7 +115,7 @@ public class Conexion  {
 
     private boolean addrecor(){
         String sql="insert into Alarma(direccion,sin_previos,ti_ataque,grad_ata,fecha,hora,otros)values" +
-                                "('"+direccion+"','sinromas previos','tipo de ataque','grado de ataque','"+fecha+"','"+hora+"','otros datos');";
+                                "( '"+direccion+"','sintomas previos','tipo de ataque','grado de ataque','"+fecha+"','"+hora+"','otros datos');";
         Log.e("valor","cadena: "+sql);
         return datos_contacto.sqLite.ejecutaSQL(sql);
     }

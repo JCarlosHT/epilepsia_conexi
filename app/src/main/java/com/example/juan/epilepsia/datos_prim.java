@@ -7,7 +7,7 @@ import com.example.juan.epilepsia.sqlite.ConexionSQLite;
 import java.io.Serializable;
 
 public class datos_prim implements Serializable{
-    public static String direccion="http://192.168.1.68";
+    public static String direccion="http://192.168.43.198";
     public static ConexionSQLite sqLite=null;
     public static String token;
     public static Cursor cursor=null;

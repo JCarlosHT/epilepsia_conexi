@@ -17,9 +17,9 @@ import android.widget.Toast;
 
 import com.example.juan.epilepsia.R;
 import com.example.juan.epilepsia.Reporte.reporte;
+import com.example.juan.epilepsia.Bitacora.bitacora;
 import com.example.juan.epilepsia.datos_contacto;
 import com.example.juan.epilepsia.sqlite.ConexionSQLite;
-import com.example.juan.epilepsia.ventanas.bitacora;
 import com.example.juan.epilepsia.ventanas.menu_epi;
 
 import java.util.Calendar;
@@ -36,7 +36,7 @@ public class agregar_recorda extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agregar_recorda);
-        botones[0]=(Button)findViewById(R.id.Fecha);
+        botones[0]=(Button)findViewById(R.id.Fecha_IR);
         botones[1]=(Button)findViewById(R.id.Hora);
         fecha=(TextView) findViewById(R.id.Fecha_tex);
         hora_show=(TextView) findViewById(R.id.Hora_tex);

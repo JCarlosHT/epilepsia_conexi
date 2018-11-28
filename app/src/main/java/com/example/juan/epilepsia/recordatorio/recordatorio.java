@@ -13,9 +13,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.juan.epilepsia.R;
+import com.example.juan.epilepsia.Bitacora.bitacora;
 import com.example.juan.epilepsia.datos_contacto;
 import com.example.juan.epilepsia.sqlite.ConexionSQLite;
-import com.example.juan.epilepsia.ventanas.bitacora;
 import com.example.juan.epilepsia.ventanas.menu_epi;
 import com.example.juan.epilepsia.Reporte.reporte;
 
@@ -86,15 +86,21 @@ public class recordatorio extends AppCompatActivity {
     public void bita2(View view) {
         Intent bita = new Intent(this,bitacora.class);
         startActivity(bita);
+        overridePendingTransition(R.anim.left_in, R.anim.left_out);
+        finish();
     }
 
     public void inicio2(View view) {
         Intent ini = new Intent(this,menu_epi.class);
         startActivity(ini);
+        overridePendingTransition(R.anim.left_in, R.anim.left_out);
+        finish();
     }
 
     public void nuevo_reco(View view) {
         Intent reco = new Intent(this,agregar_recorda.class);
         startActivity(reco);
+        overridePendingTransition(R.anim.left_in, R.anim.left_out);
+        finish();
     }
 }

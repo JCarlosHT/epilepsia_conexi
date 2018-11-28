@@ -20,7 +20,7 @@
         app:srcCompat="@android:color/background_light" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/inicio"
         android:layout_width="61dp"
         android:layout_height="52dp"
         android:layout_alignParentBottom="true"

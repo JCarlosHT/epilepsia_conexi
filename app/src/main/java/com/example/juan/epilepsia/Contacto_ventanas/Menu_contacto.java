@@ -12,11 +12,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.juan.epilepsia.R;
-import com.example.juan.epilepsia.datos_alerta_repo;
 import com.example.juan.epilepsia.datos_contacto;
-import com.example.juan.epilepsia.datos_prim;
 import com.example.juan.epilepsia.sqlite.ConexionSQLite;
-import com.example.juan.epilepsia.ventanas.Alerta_repo;
 import com.example.juan.epilepsia.ventanas.mapa_ubicacion;
 
 import java.util.ArrayList;
@@ -49,7 +46,8 @@ public class Menu_contacto extends AppCompatActivity {
              disparo();
         }
     }
-      private void disparo() {
+
+    private void disparo() {
         TextView close ;
         TextView [] alerta=new TextView[4];
         Button mapa;

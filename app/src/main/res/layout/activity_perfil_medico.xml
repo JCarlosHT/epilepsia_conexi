@@ -121,7 +121,7 @@
     </RadioGroup>
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/inicio"
         android:layout_width="218dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/editText7"

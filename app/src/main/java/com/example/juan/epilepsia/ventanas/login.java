@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.example.juan.epilepsia.Contacto_ventanas.Menu_contacto;
 import com.example.juan.epilepsia.Manifest;
 import com.example.juan.epilepsia.datos_prim;
+import com.example.juan.epilepsia.paginaweb;
 import com.example.juan.epilepsia.sqlite.ConexionSQLite;
 import com.example.juan.epilepsia.R;
 
@@ -33,17 +34,15 @@ public class login extends AppCompatActivity {
         datos_prim.sqLite= new ConexionSQLite(this);
         datos_prim.cursor=this.viewsqlite(1);
         int layout= R.layout.activity_login;//se indica con que actividad debe iniciar
-        if(datos_prim.cursor.getCount()>0){//se verifica que existan datos en la base de datos sqlite
-            Intent menu = new Intent(getApplicationContext(), menu_epi.class);
-            startActivity(menu);
-            finish();//y se finaliza la anterior
+       /* if(datos_prim.cursor.getCount()>0){//se verifica que existan datos en la base de datos sqlite
+            //y se finaliza la anterior
         }
         datos_prim.cursor=this.viewsqlite(2);
         if(datos_prim.cursor.getCount()>0){//se verifica que existan datos en la base de datos sqlite
             Intent menu = new Intent(getApplicationContext(), Menu_contacto.class);
             startActivity(menu);
             finish();//y se finaliza la anterior
-        }
+        }*/
         setContentView(layout);
         inicio();
     }
@@ -62,7 +61,11 @@ public class login extends AppCompatActivity {
     //metodos incompletos
     public void ini_se(View view){
         String Contra=Contraseña.getText().toString();
-        login(Contra);
+        if(login(Contra)){
+            Intent menu = new Intent(getApplicationContext(), menu_epi.class);
+            startActivity(menu);
+            finish();
+        }
     }
 
     public void Regis(View view){
@@ -74,7 +77,6 @@ public class login extends AppCompatActivity {
         Contraseña= (EditText) findViewById(R.id.Contraseña);
         btnLogin= (Button) findViewById(R.id.btnLogin);
         Registro=(Button) findViewById(R.id.button3);
-        Recordar= (Switch) findViewById(R.id.switch2);
     }
 
     private boolean contra(String Contraseña){
@@ -95,5 +97,10 @@ public class login extends AppCompatActivity {
         }
     }
 
+
+    public void masinfo(View view) {
+        Intent r = new Intent(getApplicationContext(),paginaweb.class);
+        startActivity(r);
+    }
 }
 

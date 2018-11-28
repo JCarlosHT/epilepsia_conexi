@@ -2,9 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/fondo"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo"
     tools:context=".Reporte.reporte">
     <ImageView
         android:id="@+id/imageView2"
@@ -17,7 +18,7 @@
         app:srcCompat="@android:color/background_light" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/inicio"
         android:layout_width="61dp"
         android:layout_height="52dp"
         android:layout_alignParentBottom="true"
@@ -40,7 +41,7 @@
         android:layout_marginLeft="101dp" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/Bita"
         android:layout_width="57dp"
         android:layout_height="51dp"
         android:layout_alignParentBottom="true"
@@ -67,6 +68,7 @@
         android:layout_alignParentTop="true"
         android:background="@color/colorPrimary"
         app:srcCompat="@color/colorPrimary" />
+
     <ImageView
         android:id="@+id/imageView12"
         android:layout_width="match_parent"
@@ -75,14 +77,38 @@
         android:layout_alignParentTop="true"
         android:background="@color/colorPrimary"
         app:srcCompat="@color/colorPrimary" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="Reporte"
+        android:text="Reportes"
         android:textColor="#0011ff"
         android:textSize="30sp" />
+
+    <ListView
+        android:id="@+id/listview_repo"
+        android:layout_width="345dp"
+        android:layout_height="379dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="52dp"
+        android:background="#CCfff8f8" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="224dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="79dp"
+        android:background="@drawable/botones"
+        android:onClick="estadisti"
+        android:text="Generar estadisticas"
+        android:textColor="#ffffff"
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="303dp" />
 
 </RelativeLayout>

@@ -2,117 +2,157 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/fondo"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo"
-    tools:context=".ventanas.bitacora">
+    tools:context=".Bitacora.bitacora">
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="333dp"
+        android:layout_height="338dp"
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="74dp"
+        android:alpha=".80"
+        app:srcCompat="@color/colorPrimary" />
+
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_marginTop="512dp"
         android:layout_marginBottom="0dp"
+        android:alpha=".80"
         app:srcCompat="@android:color/background_light" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/inicio_ag"
         android:layout_width="61dp"
         android:layout_height="52dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
+        android:layout_marginTop="512dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
-        app:srcCompat="@drawable/house"
         android:onClick="inicio1"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="16dp" />
+        app:srcCompat="@drawable/house" />
 
     <ImageView
-        android:id="@+id/reporte"
+        android:id="@+id/reporte_ag"
         android:layout_width="59dp"
         android:layout_height="52dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="101dp"
+        android:layout_marginTop="512dp"
         app:srcCompat="@drawable/network"
         android:layout_alignParentLeft="true"
         android:onClick="repo1"
         android:layout_marginLeft="101dp" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/bitacora_ag"
         android:layout_width="57dp"
         android:layout_height="51dp"
-        android:layout_alignParentBottom="true"
+        android:layout_marginTop="512dp"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="121dp"
+
         app:srcCompat="@drawable/notebook" />
 
     <ImageView
         android:id="@+id/alarmas"
         android:layout_width="54dp"
         android:layout_height="51dp"
-        android:layout_alignParentBottom="true"
+        android:layout_marginTop="512dp"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="39dp"
         android:onClick="alar1"
         app:srcCompat="@drawable/alarm" />
 
     <ImageView
-        android:id="@+id/imageView12titu"
+        android:id="@+id/imageView12"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@color/colorPrimary"
-        app:srcCompat="@color/colorPrimary" />
-
-    <ImageView
-        android:id="@+id/conte"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:alpha=".80"
-        android:background="@color/colorPrimary"
-        app:srcCompat="@color/colorPrimary" />
+        app:srcCompat="@color/colorPrimary"
+        android:alpha=".80"/>
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:id="@+id/titulo"
+        android:layout_width="136dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_alignTop="@+id/textView13"
         android:layout_centerHorizontal="true"
-        android:text="Bitacora"
+        android:text="Bitácora"
         android:textColor="#0011ff"
-        android:textSize="30sp" />
+        android:textSize="30dp" />
 
-    <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="321dp"
-        android:layout_height="338dp"
-        android:layout_alignParentBottom="true"
+    <EditText
+        android:id="@+id/Sintomas__IR"
+        android:layout_width="329dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView13"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="85dp"
-        android:alpha=".80"
-        app:srcCompat="@color/colorPrimary" />
+        android:ems="10"
+        android:hint="Síntomas previos"
+        android:inputType="text"
+        android:textColor="#0011ff"
+        android:textColorHint="#0011ff"
+        android:theme="@style/Campos_alar" />
 
     <ListView
         android:id="@+id/listview_bitaco"
         android:layout_width="345dp"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="58dp"
+        android:layout_marginTop="59dp"
         android:background="#CCfff8f8" />
 
-    <EditText
-        android:id="@+id/otros_datos"
-        android:layout_width="292dp"
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="177dp"
+        android:layout_marginTop="170dp"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/imageView13"
-        android:layout_alignTop="@+id/imageView13"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/spinner"
+        android:layout_alignStart="@+id/imageView13"
+        android:layout_marginBottom="-170dp"
+        android:text="Nivel del ataque epiléptico"
+        android:textColor="#0011ff"
+        android:textSize="20dp" />
+
+    <Spinner
+        android:id="@+id/tipo_ata"
+        android:layout_width="177dp"
+        android:layout_marginTop="160dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView8"
+        android:layout_toStartOf="@+id/bitacora_ag" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageView13"
+        android:layout_marginTop="190dp"
+        android:text="Tipo de ataque"
+        android:textColor="#0011ff"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/Otro"
+        android:layout_width="329dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="215dp"
         android:ems="10"
         android:hint="Otros datos"
         android:inputType="text"
@@ -120,8 +160,16 @@
         android:textColorHint="#0011ff"
         android:theme="@style/Campos_alar" />
 
+    <Button
+        android:id="@+id/Agregar_datos"
+        android:layout_width="217dp"
+        android:layout_height="34dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="400dp"
+        android:background="@drawable/botones"
+        android:text="Agregar datos"
+        android:onClick="agregar_d"
+        android:textColor="#ffffff" />
 
 </RelativeLayout>
-
-
 
